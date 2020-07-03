@@ -1,0 +1,263 @@
+@import "../globals/declarations";
+
+@import "../shared/keyframes";
+
+@import "../shared/app";
+
+@import "../shared/sidebar";
+
+@import "../shared/content";
+
+@import "../shared/FullScreenList";
+
+@import "../shared/AddonNotAvailable";
+
+@import "../shared/Code";
+
+@import "../globals/globals";
+
+@import "../modalWindow";
+
+@import "../rr-loadingboxtop";
+
+@import "../rr-fullScreenOverlay-animation";
+
+#app {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+
+  .main-menu{  
+
+    .single-entry{  
+      .text{
+        font-size: 0.987rem;
+        margin-left:20px;
+        font-weight: 400;
+      }
+  
+      .icon{
+        font-size: 1.23rem;
+        margin: 10px 2px;
+      }
+    }
+  }
+  
+  .code-box {
+    background-color: rgba(222, 222, 222, 0.35);
+    position: relative;
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+
+  .copied {
+    animation: scaleItCopyToClipboard 700ms infinite ease-in-out;
+  }
+  
+  .title-logo {
+    .name,
+    i {
+      color: rgb(29, 29, 29);
+    }
+
+    .name {
+      line-height: 27px;
+    }
+  }
+
+  .analyser {
+    width: calc(100% - 60px);
+
+    .box {
+      display: block;
+      width: calc(100% - 10px);
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid $border-color;
+      box-sizing: border-box;
+      padding: 10px;
+      overflow: hidden;
+      float: left;
+
+      .content {
+        .value,
+        .text {
+          margin: 5px 0;
+          font-size: 0.87rem;
+        }
+
+        .value {
+          width: calc(100% - 100px);
+          box-sizing: border-box;
+          padding: 0 10px 0 20px;
+          margin-right: 10px;
+          color: #72777a;
+        }
+        .text {
+          width: 100px;
+        }
+      }
+    }
+
+    .single-attribute {
+      margin-bottom: 20px;
+    }
+  }
+
+  .code-box-holder {
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    margin: 10px;
+    border: 1px solid $border-color;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    min-height: 265px;
+
+    .export-options {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60px;
+      height: 100%;
+      background-color: rgb(59, 59, 59);
+      padding-top: 5px;
+      z-index: 1;
+
+      i {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: transparent;
+        display: block;
+        margin: 5px auto;
+        color: $white;
+        transition-duration: $default_transition;
+      }
+
+      i:hover {
+        background-color: rgb(122, 122, 122);
+        cursor: pointer;
+      }
+    }
+
+    h1 {
+      width: calc(100% - 70px);
+      border-bottom: 2px solid $border-color;
+      padding: 10px;
+      background-color: #f9f9f9;
+      position: relative;
+      z-index: 1;
+      margin: 5px;
+      font-size: 1.223rem;
+      letter-spacing: 0.122rem;
+      border-radius: 5px;
+    }
+  }
+
+  .Executed{
+    .code-box-holder {
+      min-height: 160px;
+    }
+  }
+
+  .no-code {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 20px 10px;
+    text-align: center;
+    min-height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+
+    h1{
+      color: #72777a;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 225px;
+      display: block;
+      margin: 30px auto;
+    }
+  }
+
+  .ContentBody {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    .content{
+      width: 100%;
+    }
+
+    .buttons-holder {
+      width: calc(100% - 70px);
+      margin: 0 10px;
+
+      button {
+        border: none;
+        color: rgb(39, 39, 39);
+        height: 30px;
+        line-height: 30px;
+        box-sizing: border-box;
+        font-size: 0.78rem;
+        font-weight: 500;
+        width: 45%;
+        display: block;
+        margin: 10px 2.5%;
+        border-radius: 2px;
+        color: rgb(255, 255, 255);
+        border-bottom: none;
+        position: relative;
+        text-align: center;
+        box-shadow: 0px 0px 13px transparent;
+        transition-duration: $default_transition;
+      }
+
+      .execute {
+        background-color: $green;
+      }
+      .execute:hover {
+        box-shadow: 0px 0px 13px $green;
+      }
+
+      .all-tabs {
+        background-color: $red-pink;
+      }
+      .all-tabs:hover {
+        box-shadow: 0px 0px 13px $red;
+      }
+
+      .show-code {
+        background-color: $dodgerblue;
+      }
+      .show-code:hover {
+        box-shadow: 0px 0px 13px $dodgerblue;
+      }
+
+      .remove {
+        background-color: $red;
+      }
+      .remove:hover {
+        box-shadow: 0px 0px 13px $red;
+      }
+
+      button:hover {
+        cursor: pointer;
+      }
+    }
+
+    .single-code:hover {
+      box-shadow: 0 0 6px rgba(69, 69, 69, 0.69);
+    }
+  }
+}

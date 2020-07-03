@@ -1,0 +1,350 @@
+@import '../globals/declarations.scss';
+
+.NewMessage {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top:0;
+  left:0;
+  background-color: rgba(69, 69, 69, 0.9);
+  z-index: 2;
+  overflow: hidden;
+
+  .drag-drop-messages{
+    border: dashed $dodgerblue 8px;
+    background-color: $dodgerblue-light-l;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    width: calc(80vw - 16px);
+    height: calc(80vh - 15px);
+    z-index: 999999;
+
+    .div-text{
+      display: flex;
+      width: 100%;
+      height: 100%;
+
+      p{
+        text-align: center;
+        margin: auto;
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+
+  .h1-title {
+    box-sizing: border-box;
+    padding: 10px 10px 10px 20px;
+    background-color: #404040;
+    color: $white;
+    margin: 0;
+  }
+
+  .content {
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh 10vw;
+    background-color: $white;
+    overflow: hidden;
+
+    .content-holder{
+      width: 80vw;
+      height: calc(100% - 130px);
+      background-color: $white;
+      position: relative;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .add-file {
+      display: block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      color: $green;
+      margin: 0px 20px;
+      font-size: 1.27rem;
+    }
+
+    .add-file:hover {
+      cursor: pointer;
+    }
+
+    .icon-close {
+      position: absolute;
+      top: -60px;
+      right: 30px;
+      font-size: 4rem;
+      color: rgba(255, 255, 255, 0.9);
+      transition-duration: $default_transition;
+      float: right;
+    }
+
+    .icon-close:hover {
+      color: $red-light;
+      cursor: pointer;
+    }
+
+    .user-suggestions {
+      position: relative;
+      background-color: $white;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin: 10px 30px;
+      z-index: 3;
+      max-height: 50vh;
+
+      ul {
+        position: absolute;
+        top: -15px;
+        left: -10px;
+        width: auto;
+        border: 1px solid $border-color;
+        z-index: 2;
+        border-radius: 5px;
+        background-color: $white;
+
+        .suggestions-span-holder {
+          display: block;
+          max-height: 50vh;
+          overflow-x: hidden;
+          overflow-y: auto;
+          position: relative;
+        }
+
+        li {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          min-height: 35px;
+          line-height: 35px;
+          padding: 5px 25px 5px 25px !important;
+          color: rgb(19, 19, 19);
+          white-space: nowrap;
+          overflow: hidden;
+          font-size: 0.87rem;
+        }
+
+        .active {
+          position: relative;
+        }
+
+        .active:after {
+          content: '\2713';
+          // content: '✔';
+          color: #777;
+          font-weight: bold;
+          float: right;
+          margin-left: 5px;
+          position: absolute;
+          top: 3px;
+          left: 2px;
+        }
+
+        li:hover {
+          cursor: pointer;
+          background-color: rgb(199, 199, 199);
+        }
+      }
+    }
+
+    .error-message {
+      box-sizing: border-box;
+      padding: 0px 20px;
+      height: auto;
+      overflow: auto;
+      line-height: 30px;
+      font-size: 0.87rem;
+      color: $red;
+      animation: opacity $default_transition linear ease-in;
+
+      i {
+        font-size: inherit;
+        color: inherit;
+        margin: 0 10px 0 5px;
+      }
+    }
+
+    .footer {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      background-color: $white;
+      width: 100%;
+
+      button {
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-color: $dodgerblue;
+        letter-spacing: 0.02rem;
+        color: $white;
+        font-size: 0.87rem;
+        text-align: center;
+        border: none;
+        height: 40px;
+        line-height: 40px;
+        display: block;
+        margin: 10px 20px;
+        width: 200px;
+        box-shadow: 0px 0px 3px transparent;
+        transition-duration: 350ms;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      button:hover {
+        box-shadow: 0px 0px 3px $dodgerblue;
+        cursor: pointer;
+      }
+
+      .container {
+        box-sizing: border-box;
+        padding: 8px 10px 20px 10px;
+
+        [type='file'] {
+          border: 0;
+          clip: rect(0, 0, 0, 0);
+          height: 1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute !important;
+          white-space: nowrap;
+          width: 1px;
+        }
+    
+        [type='file'] + label {
+          color: rgba(69, 69, 69, 0.4);
+          font-size: 1.3rem;
+          cursor: pointer;
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          border-radius: 50%;
+          background-color: transparent;
+          transition-duration: $default_transition;
+          border: 1px dashed transparent;
+        }
+    
+        label {
+          position: relative;
+    
+          i {
+            display: block;
+            transition-duration: $default_transition;
+            font-size: 1.37rem;
+            color: rgba(69,69,69,.9);
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            transition-duration: $default_transition;
+          }
+        }
+    
+        label:hover {
+          i {
+            background-color: rgba(69,69,69,.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+.UploadedFiles{
+
+  .loading{
+    width: 20px;
+    height: 20px;
+    margin: 20px;
+  }
+
+  .UploadedFile{
+    margin: 20px;
+    width: 250px;
+    max-height: 180px;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    float: left;
+
+    .trash{
+      position: absolute;
+      top: -20px;
+      left:0px;
+    }
+
+    .trash:hover{
+      color: $red;
+      cursor: pointer;
+    }
+
+    .image-preview{
+      max-width: 100%;
+      max-height: 155px;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+
+      img{
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    span{
+      display: block;
+      box-sizing: border-box;
+      padding:6px 5px;
+      font-size: 0.87rem;
+      color: rgba(69,69,69,.9);
+      background-color: rgba(69,69,69,.2);
+      border-bottom-left-radius:3px;
+      border-bottom-right-radius:3px;
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-wrap: none;
+      white-space: nowrap;
+    }
+  }
+
+  .error {
+    margin: 10px 0;
+    box-sizing: border-box;
+    padding: 0;
+    height: auto;
+    line-height: 30px;
+    font-size: 0.87rem;
+    color: $red;
+    animation: opacity $default_transition linear ease-in;
+    max-width: calc(100% - 20px);
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    border-radius: 3px;
+
+    span{
+      padding: 10px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow: visible;
+      position: relative;
+      background-color: $red-light-xl;
+      border-radius: 3px;
+    }
+  }
+}

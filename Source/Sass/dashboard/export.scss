@@ -1,0 +1,47 @@
+
+.Export {
+  max-width: 600px;
+  margin: 10vh auto;
+  width: 50vw;
+  min-height: 500px;
+  height: 50vh;
+
+  .single-box {
+    margin: 20px 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 3px $dodgerblue-light;
+    transition-duration: $default_transition;
+    text-decoration: none;
+    overflow: hidden;
+    padding: 0px;
+
+    h1 {
+      box-sizing: border-box;
+      padding: 0px 20px;
+      font-size: 1.37rem;
+      color: #72777a;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    img {
+      display: block;
+      max-width: 250px;
+      margin: 20px auto;
+    }
+  }
+
+  .single-box-0{
+    width: calc(100% - 20px);
+    height: 400px;
+    display: inline-block;
+    float: none;
+  }
+
+  .single-box:hover {
+    cursor: pointer;
+    border: 1px solid $dodgerblue-light;
+  }
+}

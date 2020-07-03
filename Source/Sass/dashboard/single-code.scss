@@ -1,0 +1,138 @@
+@import "../globals/declarations";
+
+.single-code {
+  @media screen and (min-width: 1140px) {
+    display: inline-block;
+    width: calc(50% - 40px);
+    margin: 30px 20px;
+    float: left;
+  }
+
+  width: calc(100% - 30px);
+  margin: 30px 15px;
+  box-shadow: 0 0 8px rgba(69, 69, 69, 0.4);
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  padding-top: 0px;
+  transition-duration: $default_transition;
+
+  .box-info-p {
+    width: 100%;
+    min-height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #272727;
+    font-size: 0.87rem;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .box-info-p:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    border-radius: 50%;
+    height: 2px;
+    background-color: $green;
+  }
+
+  .box-text-icon {
+    .single-attribute {
+      min-height: 20px;
+      line-height: 20px;
+      margin: 0 20px;
+    }
+
+    .head-info {
+      word-wrap: break-word;
+      min-height: 35px;
+      line-height: 35px;
+      color: #272727;
+      font-size: 0.934rem;
+    }
+
+    .icon-in-title {
+      margin-right: 10px;
+      font-size: 16px;
+    }
+
+    .icon-title-info {
+      color: $pink;
+    }
+
+    .icon-title-run {
+      color: $orange;
+    }
+
+    .icon-title-attr {
+      color: $green;
+    }
+
+    .icon-danger {
+      color: $red;
+    }
+
+    .fa-node-js {
+      color: $dodgerblue;
+    }
+
+    .buttons {
+      float: right;
+
+      i {
+        margin: 10px 5px;
+        font-size: 16px;
+        border-radius: 50%;
+        transition-duration: $default_transition;
+        background-color: transparent;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        padding: 3px;
+      }
+
+      i:hover {
+        cursor: pointer;
+        background-color: rgba(179, 179, 179, 0.1);
+      }
+
+      .trash {
+        color: $red;
+      }
+
+      .update {
+        color: $orange;
+      }
+
+      .save {
+        color: $green;
+      }
+
+      .dupplicate {
+        color: $dodgerblue;
+      }
+    }
+  }
+
+  textarea {
+    width: calc(100% - 5px);
+    display: block;
+    margin: 0;
+    min-height: 200px;
+    border-radius: 5px;
+    line-height: 30px;
+    font-size: 0.87rem;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding: 5px;
+    border: none;
+    resize: vertical;
+    margin-bottom: 10px;
+    border: 1px solid $border-color;
+  }
+}

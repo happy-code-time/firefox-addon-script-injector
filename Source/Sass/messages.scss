@@ -1,0 +1,82 @@
+
+/*
+    Messages on website
+*/
+.messages{
+    position: fixed;
+    left:10px;
+    bottom: 20px;
+    min-height:30px;
+    line-height:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index:99;
+    box-sizing: border-box;
+    padding:5px 10px;
+
+    .close{
+        position: absolute;
+        top:-40px;
+        left:10px;
+        font-size: 2rem;
+        z-index:991;
+        border-radius:10px;
+        color: rgb(69,69,69);
+
+        .divtriangle{
+            width:150px;
+            top:-90px;
+            left:-5px;
+            position: absolute;
+            background-color: rgb(69,69,69);
+            border-radius:5px;
+            cursor: default;
+            transition-duration: $default_transition;
+            opacity:0;
+            z-index:-1;
+            display: none;
+        }
+        .divtriangle p{
+            min-height:20px;
+            line-height:20px;
+            text-align:center;
+            width: 100%;
+            color:rgb(255,255,255);
+            font-size:0.77rem;
+            letter-spacing: 0.03rem;
+            transition-duration: $default_transition;
+            box-sizing: border-box;
+            padding:10px;
+        }
+    }
+    .close:hover{
+        cursor: pointer;
+
+        .divtriangle{
+            display: block;
+            opacity: 1;
+            z-index:1;
+        }
+    }
+
+    p{
+        box-sizing: border-box;
+        padding:5px 10px;
+        border-radius:5px;
+        color:rgb(255,255,255);
+        text-align: left;
+        font-size: 0.87rem;
+        margin:10px 0;
+        border-radius:5px;
+    }
+
+    .error{
+        background-color: $red-light;
+        border-radius:5px;
+    }
+    .default{
+        background-color: rgb(69,69,69);;
+        border-radius:5px;
+    }
+}

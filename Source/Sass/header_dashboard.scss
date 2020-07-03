@@ -1,0 +1,140 @@
+/*
+    HEADER
+*/
+.header {
+    min-height:50px;
+    background-color: rgb(0,0,0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vW;
+
+    .react-divcreator-menuanimation-holder-accordion{
+        padding: 8px 10px 5px 13px;
+    }
+
+    .menu-animation-span-example-custom{
+        width: 210px;
+        display: block;
+        padding:10px;
+        box-sizing: border-box;
+    
+        .react-divcreator-menuanimation-icons--custom{
+            box-sizing: border-box;
+            padding:0 10px;
+            transition-duration: 200ms;
+            margin-left:10px;
+
+            p{
+                line-height: 30px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+    
+                i{
+                    color:rgb(255,255,255);
+                    font-size: 0.82rem;
+                    margin: 9px 10px 0;
+                    transition-duration: 200ms;
+                }
+                span{
+                    color:rgb(255,255,255);
+                    transition-duration: 200ms;
+                    width: 100%;
+                    font-size:0.92rem;
+                }
+            }
+        }
+        
+        .react-divcreator-menuanimation-icons--custom:hover{
+            cursor:pointer;
+        }
+    
+        .react-divcreator-menuanimation-icons--custom {
+            padding:0;
+        }
+        .react-divcreator-menuanimation-custom{
+            width: 100%;
+            background-color:transparent;
+            border-radius:5px;
+            display: inline-block;
+            position: relative;
+            padding: 2px 10px;
+            transition-duration: $default_transition;
+    
+            .header-menu-animation{
+                background-color:rgb(255,255,255);
+                right: auto !important;
+                width: 140px;
+                left: -210px !important;
+                top:-3px;
+                padding: 0;
+                margin: 0;
+                box-shadow:0px 3px 6px rgba(99,99,99,.8);
+                min-height:80px;
+            }
+    
+            .react-divcreator-menuanimation-holder{
+                min-width: 250px;
+                border-left:7px solid $red-light;
+    
+                .react-divcreator-accordion__single-content{
+                    padding-left:0px;
+                }
+    
+                i{
+                    color:rgba(69,69,69,.6);
+                    margin:0 20px 0 10px;
+                    font-size:0.97rem;
+                }
+                a{
+                    color:rgba(69,69,69,1);
+                    font-size:0.97rem;
+                    transition-duration: 200ms;
+                    position: relative;
+                    width: 100%;
+                    display: block;
+                    min-height: 40px;
+                    line-height: 40px;
+                    transition-duration: $default_transition;
+                }
+
+                a:hover{
+                    color:$red-light;
+                }
+            }
+        }
+        .react-divcreator-menuanimation-custom:hover{
+            background-color:rgba(69,69,69,.7);
+        }
+        .react-divcreator-accordion,
+        .parent{
+            padding:0;
+        }
+    }
+    .version{
+        float: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 40px;
+        margin-right: 30px;
+        margin-top: 7px;
+
+        .n{
+            color:$red-pink;
+            font-size: 0.97rem;
+            font-weight: 500;
+            box-sizing: border-box;
+            letter-spacing: 0.1rem;
+        }
+        .v{
+            color:$red-pink;
+            text-align: right;
+            font-size: .74rem;
+            font-weight: bold;
+            box-sizing: border-box;
+            letter-spacing: 0.05rem;
+        }
+    }
+}

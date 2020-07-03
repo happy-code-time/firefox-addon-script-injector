@@ -1,0 +1,20 @@
+.select-wrapper {
+
+  .title{
+    position: relative;
+    z-index: 1;
+  }
+
+  .icon-down {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: #202124;
+    pointer-events: none;
+    z-index: 2;
+  }
+}
+
+.select-wrapper :hover{
+    cursor: pointer;
+}

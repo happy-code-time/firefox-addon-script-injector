@@ -1,0 +1,56 @@
+@import '../globals/declarations';
+
+.website--import {
+    .box-input {
+      width: 200px;
+      height: 210px;
+      margin: 10vh auto;
+    }
+  
+    [type="file"] {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute !important;
+      white-space: nowrap;
+      width: 1px;
+    }
+  
+    [type="file"] + label {
+      color: rgba(69, 69, 69, 0.4);
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.57);
+      transition-duration: $default_transition;
+      border: 1px dashed transparent;
+    }
+  
+    label {
+      position: relative;
+  
+      i {
+        display: block;
+        line-height: 200px;
+        transition-duration: $default_transition;
+        font-size: 70px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+      }
+    }
+  
+    label:hover {
+      color: $pink;
+  
+      i {
+        color: $pink;
+      }
+    }
+  }

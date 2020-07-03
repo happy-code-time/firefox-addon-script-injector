@@ -1,0 +1,88 @@
+.modal-window {
+  box-sizing: border-box;
+  padding: 10px;
+
+  .react-divcreator-modal-child {
+    border-radius: 5px;
+    height: 95%;
+
+    .react-divcreator-modal-child-content {
+      line-height: 30px;
+      box-sizing: border-box;
+      color: rgba(0, 0, 0, 0.87);
+      font-size: 0.87rem;
+      word-wrap: break-word;
+      overflow-y: auto;
+    }
+  }
+
+  .modal-window .react-divcreator-modal-child .react-divcreator-modal-child-content{
+    padding: 10px 5px;
+  }
+
+  .react-divcreator-modal-holder-close {
+
+    .close-modal {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      top: -32px;
+      right: -2px;
+      transition-duration: $default_transition;
+      line-height: 20px;
+      text-align: center;
+
+      i {
+        font-size: 3rem;
+        color: $red;
+      }
+    }
+  }
+
+  .close-modal:hover {
+    i {
+      cursor: pointer;
+    }
+  }
+
+  .copied {
+    animation: scaleItCopyToClipboard 700ms infinite ease-in-out;
+  }
+
+  .code-box {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid $border-color;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    min-height: 225px;
+    background-color: rgba(253, 222, 230, 0.3);
+
+    .code {
+      width: 100%;
+
+      li {
+        list-style: none;
+        line-height: 20px;
+        letter-spacing: 0.11rem;
+        margin:0;
+        padding: 0;
+      }
+
+      .line-number {
+        width: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: rgba(69, 69, 69, 0.4);
+      }
+      .code {
+        width: calc(100% - 50px);
+      }
+    }
+  }
+}
