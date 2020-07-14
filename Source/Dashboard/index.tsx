@@ -10,8 +10,6 @@ import ModuleSideBar from '../AppFiles/Modules/SideBar';
 
 import Menu from '../AppFiles/Modules/Menu';
 
-import Home from './pages/Home';
-
 import All from './pages/All';
 
 import NewScript from './pages/NewScript';

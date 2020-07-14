@@ -5,7 +5,7 @@ const ENTRY_DASHBOARD = {
     out: path.resolve(__dirname, './Distribution/Popup/')
 };
 
-const version = 'v3.0.0';
+const version = 'v3.0.1';
 
 const config = {
     mode: 'production',
@@ -18,7 +18,7 @@ const config = {
         filename: 'production.'+version+'.js',
     },
     cache: false,
-    devtool: 'inline-source-map',
+    devtool: false,
     module: {
         rules: [
             {
