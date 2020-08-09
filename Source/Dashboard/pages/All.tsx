@@ -447,7 +447,7 @@ class All extends React.Component {
                         data={this.getCurrentActiveTabs()}
                       />
                       <h1>
-                        {`${name} (${type})`}
+                        {`${name} (tag: ${type})`}
                         <i className="fas fa-power-off" title={this.translations.dashboard_msg_2} onClick={(e) => this.executeCodeInAllTabs(c)}></i>
                         <i className="fas fa-syringe" title={this.translations.dashboard_msg_1} onClick={(e) => this.toggleList(loopIndex)} />
                       </h1>

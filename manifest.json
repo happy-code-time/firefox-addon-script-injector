@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "ScriptInjector",
     "short_name": "ScriptInjector",
-    "version": "3.0.1",
+    "version": "3.1.0",
     "description": "Script Injector - custom scripts injection on each website.",
     "browser_action": {
         "browser_style": true,

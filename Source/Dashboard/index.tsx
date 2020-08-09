@@ -177,7 +177,7 @@ class App extends Component {
         />
         <GlobalMessages
           messageKey='messagesApp'
-          timer={2000}
+          timer={1000}
           codeMapping={{
             '-2': {
               title: this.translations.notLoggedIn,

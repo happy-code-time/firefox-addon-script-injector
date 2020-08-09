@@ -74,7 +74,7 @@ if (null == localStorage.getItem('applanguage')) {
     localStorage.setItem('applanguage', 'en');
 }
 
-const EXTENSIONS_NOT_AVAILABLE = '💤';
+const EXTENSIONS_NOT_AVAILABLE = '';
 
 var injectedCodes = {};
 

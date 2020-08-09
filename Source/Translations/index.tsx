@@ -3,7 +3,7 @@ export const getTranslations = () => {
 
     const englishTranslation = {
         no_injections_yet: 'No injections performed',
-        click_to_export: 'Klick to export your scripts',
+        click_to_export: 'Click to export your scripts',
         click_to_exec: 'Click to inject script',
         changeCodeStyleBox: 'Toggle box layout',
         changeCodeTint: 'Change Source Code layout',
